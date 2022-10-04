@@ -1,13 +1,10 @@
-package com.javapro.lesson13.phonebook;
+package com.javapro.lesson13.phonebook.model;
 
 public class Record {
 
-  private String name;
-  private String number;
+  private final String name;
+  private final String number;
 
-  public Record() {
-
-  }
   public Record(String name, String number) {
     this.name = name;
     this.number = number;
@@ -17,11 +14,11 @@ public class Record {
     return name;
   }
 
-   @Override
+  @Override
   public String toString() {
     return "{" +
-        "name='" + name + '\'' +
-        ", number='" + number + '\'' +
+        "name=" + name +
+        ", number=" + number +
         '}';
   }
 }

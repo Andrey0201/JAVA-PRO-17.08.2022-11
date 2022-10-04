@@ -58,7 +58,6 @@ public class Main {
     }
   }
 
-
   public static Set<String> findOccurrence(List<String> list) {
     Set<String> set = new HashSet<>();
     for (String s : list) {
