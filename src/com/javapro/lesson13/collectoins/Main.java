@@ -3,8 +3,10 @@ package com.javapro.lesson13.collectoins;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Main {
@@ -27,7 +29,8 @@ public class Main {
 
     calcOccurrence(list);
 
-    System.out.print(findOccurrence(list));
+    System.out.println(findOccurrence(list));
+    System.out.println(findOccurrence1(list));
   }
 
   public static void countOccurrence(List<String> list, String string) {
@@ -58,6 +61,9 @@ public class Main {
     }
   }
 
+  /**
+   * 1 вариант
+   */
   public static Set<String> findOccurrence(List<String> list) {
     Set<String> set = new HashSet<>();
     for (String s : list) {
@@ -66,5 +72,16 @@ public class Main {
       set.add(string);
     }
     return set;
+  }
+
+  /**
+   * 2 вариант
+   */
+  public static Map<String, Integer> findOccurrence1(List<String> list) {
+    Map<String, Integer> map = new HashMap<>();
+    for (String s : list) {
+      map.put(s, Collections.frequency(list, s));
+    }
+    return map;
   }
 }
