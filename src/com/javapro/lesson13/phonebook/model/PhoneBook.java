@@ -7,10 +7,6 @@ public class PhoneBook {
 
   private final List<Record> records = new ArrayList<>();
 
-  public PhoneBook() {
-
-  }
-
   public List<Record> add(String name, String number) {
     if (name == null || number == null) {
       System.out.println("name or number can't be null");
@@ -45,6 +41,6 @@ public class PhoneBook {
 
   @Override
   public String toString() {
-    return "" + records + "";
+    return "" + records + "" ;
   }
 }
